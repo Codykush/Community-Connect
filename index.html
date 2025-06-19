@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Connect | Discover Local Crafts</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <!-- Animated Background Elements -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Artisan<span>Connect</span></h1>
+                <p>Bridging Crafts and Community</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="/artisans.html">Discover Artisans</a></li>
+                    <li><a href="/about.html">Our Mission</a></li>
+                    <li><a href="#" class="btn-cta">Join Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="animate-pop-in">Discover Hidden <span>Artisan Treasures</span> Near You</h2>
+                    <p class="animate-pop-in">Connecting you with local craftsmen preserving traditional arts</p>
+                    <div class="search-bar animate-pop-in">
+                        <input type="text" placeholder="Search by craft or location...">
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-in">
+                    <img src="images/hero-artisan.png" alt="Artisan at work">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h3>Why ArtisanConnect?</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <img src="/3.jpg" alt="Map Icon">
+                        </div>
+                        <h4>Find Local Artisans</h4>
+                        <p>Discover craftsmen in your area with our interactive map</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <img src="/2.jpg" alt="Story Icon">
+                        </div>
+                        <h4>Hear Their Stories</h4>
+                        <p>Learn about traditional techniques and artisan histories</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <img src="/1.jpg" alt="Support Icon">
+                        </div>
+                        <h4>Support Local Economy</h4>
+                        <p>Directly contribute to preserving cultural heritage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlight">
+            <div class="container">
+                <h3>This Week's <span>Featured Artisans</span></h3>
+                <div class="artisan-grid" id="featured-artisans">
+                    <!-- Dynamically loaded from JS -->
+                </div>
+                <a href="/artisans.html" class="btn-view-all">View All Artisans →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+               
+                
+                <class class="gap"></class>
+                <div class="social-links">
+                   
+                   
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about.html">Home</a></li>
+                    <li><a href="/artisan-profile.html">Artisan Directory</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 ArtisanConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/firebase.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>

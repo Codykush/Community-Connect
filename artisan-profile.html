@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Profile | ArtisanConnect</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body class="profile-page">
+    <!-- Animated Background Elements -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Artisan<span>Connect</span></h1>
+                <p>Bridging Crafts and Community</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/artisans.html">Discover Artisans</a></li>
+                    <li><a href="/about.html">Our Mission</a></li>
+                    <li><a href="#" class="btn-cta">Join Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-header">
+            <div class="container">
+                <a href="/artisans.html" class="back-link">← Back to Directory</a>
+                <div class="profile-main" id="profile-main">
+                    <!-- Filled dynamically from JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-details">
+            <div class="container">
+                <div class="details-grid">
+                    <div class="about-artisan">
+                        <h3>About This Artisan</h3>
+                        <p id="artisan-description">Loading...</p>
+                        <div class="contact-info">
+                            <h4>Contact Information</h4>
+                            <p id="artisan-contact">Loading...</p>
+                            <button class="btn-contact">Contact Artisan</button>
+                        </div>
+                    </div>
+                    <div class="artisan-map">
+                        <h3>Find This Shop</h3>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="artisan-gallery">
+            <div class="container">
+                <h3>Gallery</h3>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Filled dynamically from JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="/firebase.js"></script>
+    <script src="/profile.js"></script>
+</body>
+</html>

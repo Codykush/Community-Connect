@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Directory | ArtisanConnect</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="directory-page">
+    <!-- Animated Background Elements -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Artisan<span>Connect</span></h1>
+                <p>Bridging Crafts and Community</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/artisans.html" class="active">Discover Artisans</a></li>
+                    <li><a href="/about.html">Our Mission</a></li>
+                    <li><a href="#" class="btn-cta">Join Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="directory-hero">
+            <div class="container">
+                <h2 class="animate-pop-in">Discover <span>Local Artisans</span></h2>
+                <p class="animate-pop-in delay-1">Browse our community of talented craftspeople preserving traditional arts</p>
+            </div>
+        </section>
+
+        <section class="directory-filters">
+            <div class="container">
+                <div class="filter-group">
+                    <input type="text" id="search-input" placeholder="Search by name or craft...">
+                    <select id="location-filter">
+                        <option value="">All Locations</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                    <select id="craft-filter">
+                        <option value="">All Crafts</option>
+                        <option value="Pottery">Pottery</option>
+                        <option value="Textiles">Textiles</option>
+                        <option value="Jewelry">Jewelry</option>
+                        <option value="Woodwork">Woodwork</option>
+                        <option value="Metalwork">Metalwork</option>
+                    </select>
+                    <button id="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="directory-results">
+            <div class="container">
+                <div class="results-header">
+                    <h3 id="results-count">Loading Artisans...</h3>
+                    <div class="sort-options">
+                        <span>Sort by:</span>
+                        <select id="sort-by">
+                            <option value="newest">Newest First</option>
+                            <option value="name">Name (A-Z)</option>
+                            <option value="location">Location</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="artisan-grid" id="artisan-grid">
+                    <!-- Filled dynamically from JS -->
+                </div>
+                <div class="pagination">
+                    <button id="prev-page" disabled>← Previous</button>
+                    <span id="page-info">Page 1 of 1</span>
+                    <button id="next-page" disabled>Next →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="/firebase.js"></script>
+    <script src="/artisans.js"></script>
+</body>
+</html>
