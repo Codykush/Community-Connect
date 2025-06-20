@@ -36,16 +36,32 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2 class="animate-pop-in">Discover Hidden <span>Artisan Treasures</span> Near You</h2>
-                    <p class="animate-pop-in">Connecting you with local craftsmen preserving traditional arts</p>
+                    <h1 class="animate-pop-in">Discover Hidden <span>Artisan Treasures</span> Near You</h1>
+                    <p class="animate-pop-in">Connecting you with local craftsmen preserving traditional arts and heritage</p>
                     <div class="search-bar animate-pop-in">
                         <input type="text" placeholder="Search by craft or location...">
                         <button>Explore</button>
                     </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Artisans</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Craft Types</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Handmade</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-image animate-slide-in">
-                    <img src="images/hero-artisan.png" alt="Artisan at work">
-                </div>
+            </div>
+            <div class="hero-shape">
+                <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                    <path d="M0,100 C300,0 700,0 1440,100 L1440,0 L0,0 Z"></path>
+                </svg>
             </div>
         </section>
 
@@ -55,21 +71,21 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="icon-box">
-                            <img src="/3.jpg" alt="Map Icon">
+                            <img src="/images/3.jpg" alt="Map Icon">
                         </div>
                         <h4>Find Local Artisans</h4>
                         <p>Discover craftsmen in your area with our interactive map</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon-box">
-                            <img src="/2.jpg" alt="Story Icon">
+                            <img src="/images/2.jpg" alt="Story Icon">
                         </div>
                         <h4>Hear Their Stories</h4>
                         <p>Learn about traditional techniques and artisan histories</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon-box">
-                            <img src="/1.jpg" alt="Support Icon">
+                            <img src="/images/1.jpg" alt="Support Icon">
                         </div>
                         <h4>Support Local Economy</h4>
                         <p>Directly contribute to preserving cultural heritage</p>
@@ -79,12 +95,49 @@
         </section>
 
         <section class="spotlight">
+            <div class="spotlight-wave">
+                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,80 C360,0 1080,0 1440,80 L1440,0 L0,0 Z" fill="#4ECDC4" fill-opacity="0.08"/></svg>
+            </div>
             <div class="container">
                 <h3>This Week's <span>Featured Artisans</span></h3>
+                <p class="spotlight-subtitle">Meet the makers who are keeping traditional crafts alive. Handpicked for their skill, story, and passion.</p>
                 <div class="artisan-grid" id="featured-artisans">
-                    <!-- Dynamically loaded from JS -->
+                    <!-- Placeholder artisan cards -->
+                    <div class="artisan-card">
+                        <div class="artisan-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="Weaver at loom">
+                            <span class="artisan-badge" title="Featured"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="artisan-info">
+                            <h4>Ravi the Weaver</h4>
+                            <p>Hand-loom textiles from Varanasi</p>
+                            <a href="/artisan-profile.html?id=1" class="btn-profile"><i class="fas fa-user"></i> View Profile</a>
+                        </div>
+                    </div>
+                    <div class="artisan-card">
+                        <div class="artisan-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80" alt="Potter crafting clay">
+                            <span class="artisan-badge" title="Featured"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="artisan-info">
+                            <h4>Asha the Potter</h4>
+                            <p>Eco-friendly clay pottery from Jaipur</p>
+                            <a href="/artisan-profile.html?id=2" class="btn-profile"><i class="fas fa-user"></i> View Profile</a>
+                        </div>
+                    </div>
+                    <div class="artisan-card">
+                        <div class="artisan-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="Wood carver at work">
+                            <span class="artisan-badge" title="Featured"><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="artisan-info">
+                            <h4>Karan the Woodcarver</h4>
+                            <p>Intricate wooden toys from Channapatna</p>
+                            <a href="/artisan-profile.html?id=3" class="btn-profile"><i class="fas fa-user"></i> View Profile</a>
+                        </div>
+                    </div>
                 </div>
-                <a href="/artisans.html" class="btn-view-all">View All Artisans →</a>
+                <a href="/artisans.html" class="btn-view-all big"><i class="fas fa-users"></i> View All Artisans &rarr;</a>
             </div>
         </section>
     </main>
