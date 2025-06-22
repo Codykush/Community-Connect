@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Community - ArtisanConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/join-community.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="ArtisanConnect Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/artisans.html">Discover Artisans</a></li>
+                    <li><a href="/about.html">Our Mission</a></li>
+                    <li><a href="/join-community.html" class="btn-cta">Join Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-hero">
+            <div class="container">
+                <h1>Join Our Growing Community</h1>
+                <p>Connect with fellow artisans, share your craft, and grow your business with ArtisanConnect. Whether you're an artist, crafter, or supporter, there's a place for you here.</p>
+            </div>
+        </section>
+
+        <div class="join-container">
+            <div class="join-cards">
+                <div class="join-card">
+                    <div class="join-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>For Artisans</h3>
+                    <p>Showcase your work, connect with customers, and grow your business in our supportive community of makers and creators.</p>
+                    <a href="#artisan-form" class="btn-join">Join as Artisan</a>
+                </div>
+
+                <div class="join-card">
+                    <div class="join-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>For Supporters</h3>
+                    <p>Discover unique handmade products, connect with artisans, and support traditional crafts and local communities.</p>
+                    <a href="#supporter-form" class="btn-join btn-outline">Join as Supporter</a>
+                </div>
+            </div>
+
+            <section class="join-form-section" id="artisan-form">
+                <h2 style="text-align: center; margin-bottom: 40px;">Join as an Artisan</h2>
+                <form id="artisanJoinForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="craft">Your Craft/Art Form</label>
+                        <input type="text" id="craft" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <input type="number" id="experience" class="form-control" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="portfolio">Portfolio/Website (Optional)</label>
+                        <input type="url" id="portfolio" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell us about yourself and your work</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn-join" style="border: none; cursor: pointer;">Submit Application</button>
+                    </div>
+                </form>
+            </section>
+
+            <div class="form-footer">
+                <p>Have questions about joining? <a href="mailto:community@artisanconnect.com">Contact our team</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>Join our community of artisans and supporters</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/artisans.html">Artisan Directory</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/join-community.html">Join Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="current-year">2024</span> ArtisanConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/join-community.js"></script>
+</body>
+</html>
