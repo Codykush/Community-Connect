@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisan Directory | ArtisanConnect</title>
+    <title>Discover Artisans | ArtisanConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/artisans.css">
 </head>
-<body class="directory-page">
+<body class="artisans-page">
     <!-- Animated Background Elements -->
     <div class="bg-circle circle-1"></div>
     <div class="bg-circle circle-2"></div>
@@ -25,74 +29,260 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="artisans.html" class="active">Discover Artisans</a></li>
                     <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="/join-community.html" class="btn-cta">Join Community</a></li>
+                    <li><a href="join-community.html" class="btn-cta">Join Community</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="directory-hero">
+        <!-- Hero Section -->
+        <section class="artisans-hero">
             <div class="container">
-                <h2 class="animate-pop-in">Discover <span>Local Artisans</span></h2>
-                <p class="animate-pop-in delay-1">Browse our community of talented craftspeople preserving traditional arts</p>
+                <h1 class="animate-pop-in">Discover <span>Talented Artisans</span></h1>
+                <p class="animate-pop-in delay-1">Connect with skilled craftspeople preserving traditional arts and creating unique handmade products</p>
             </div>
         </section>
 
-        <section class="directory-filters">
+        <!-- Search and Filters -->
+        <section class="artisans-filters">
             <div class="container">
-                <div class="filter-group">
-                    <input type="text" id="search-input" placeholder="Search by name or craft...">
-                    <select id="location-filter">
-                        <option value="">All Locations</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Jaipur">Jaipur</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Kolkata">Kolkata</option>
-                    </select>
-                    <select id="craft-filter">
-                        <option value="">All Crafts</option>
-                        <option value="Pottery">Pottery</option>
-                        <option value="Textiles">Textiles</option>
-                        <option value="Jewelry">Jewelry</option>
-                        <option value="Woodwork">Woodwork</option>
-                        <option value="Metalwork">Metalwork</option>
-                    </select>
-                    <button id="apply-filters">Apply Filters</button>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search artisans, crafts, or locations...">
+                    <button class="btn-search">Search</button>
                 </div>
-            </div>
-        </section>
-
-        <section class="directory-results">
-            <div class="container">
-                <div class="results-header">
-                    <h3 id="results-count">Loading Artisans...</h3>
-                    <div class="sort-options">
-                        <span>Sort by:</span>
-                        <select id="sort-by">
-                            <option value="newest">Newest First</option>
-                            <option value="name">Name (A-Z)</option>
-                            <option value="location">Location</option>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="craftFilter">Craft Type:</label>
+                        <select id="craftFilter" class="filter-select">
+                            <option value="">All Crafts</option>
+                            <option value="pottery">Pottery</option>
+                            <option value="textiles">Textiles</option>
+                            <option value="jewelry">Jewelry</option>
+                            <option value="woodwork">Woodwork</option>
+                            <option value="metalwork">Metalwork</option>
+                            <option value="painting">Painting</option>
+                            <option value="sculpture">Sculpture</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="locationFilter">Location:</label>
+                        <select id="locationFilter" class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="varanasi">Varanasi</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By:</label>
+                        <select id="sortBy" class="filter-select">
+                            <option value="featured">Featured</option>
+                            <option value="newest">Newest</option>
+                            <option value="rating">Highest Rated</option>
                         </select>
                     </div>
                 </div>
-                <div class="artisan-grid" id="artisan-grid">
-                    <!-- Filled dynamically from JS -->
+            </div>
+        </section>
+
+        <!-- Artisans Grid -->
+        <section class="artisans-grid">
+            <div class="container">
+                <div class="artisans-container">
+                    <!-- Artisan Card 1 -->
+                    <div class="artisan-card" data-craft="pottery" data-location="delhi">
+                        <div class="artisan-image">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Rajesh Kumar - Master Potter" loading="lazy">
+                            <span class="artisan-badge featured">Featured</span>
+                        </div>
+                        <div class="artisan-info">
+                            <div class="artisan-header">
+                                <h3>Rajesh Kumar</h3>
+                                <div class="rating" data-rating="4.8">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                    <span class="review-count">(124)</span>
+                                </div>
+                            </div>
+                            <p class="craft">Pottery Artist</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                            <p class="description">Master potter with 15+ years of experience in traditional Indian pottery techniques. Specializes in terracotta and blue pottery with intricate hand-painted designs.</p>
+                            <div class="artisan-tags">
+                                <span>Handmade</span>
+                                <span>Terracotta</span>
+                                <span>Blue Pottery</span>
+                            </div>
+                            <a href="artisan-profile.html" class="btn btn-primary btn-block">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Artisan Card 2 -->
+                    <div class="artisan-card" data-craft="textiles" data-location="jaipur">
+                        <div class="artisan-image">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Meena Sharma - Textile Artist" loading="lazy">
+                            <span class="artisan-badge new">New</span>
+                        </div>
+                        <div class="artisan-info">
+                            <div class="artisan-header">
+                                <h3>Meena Sharma</h3>
+                                <div class="rating" data-rating="4.9">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                    <span class="review-count">(89)</span>
+                                </div>
+                            </div>
+                            <p class="craft">Textile Artist</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Jaipur, India</p>
+                            <p class="description">Specializes in traditional block printing and natural dyeing techniques. Creates beautiful hand-block printed fabrics using organic materials.</p>
+                            <div class="artisan-tags">
+                                <span>Block Print</span>
+                                <span>Natural Dyes</span>
+                                <span>Handloom</span>
+                            </div>
+                            <a href="artisan-profile.html" class="btn btn-primary btn-block">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Artisan Card 3 -->
+                    <div class="artisan-card" data-craft="woodwork" data-location="bangalore">
+                        <div class="artisan-image">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Marcus Johnson - Woodworker" loading="lazy">
+                            <span class="artisan-badge featured">Featured</span>
+                        </div>
+                        <div class="artisan-info">
+                            <div class="artisan-header">
+                                <h3>Marcus Johnson</h3>
+                                <div class="rating" data-rating="4.7">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                    <span class="review-count">(156)</span>
+                                </div>
+                            </div>
+                            <p class="craft">Woodworker</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                            <p class="description">Creating custom furniture and home decor with reclaimed wood and traditional joinery techniques. Specializes in sustainable woodworking practices.</p>
+                            <div class="artisan-tags">
+                                <span>Custom Furniture</span>
+                                <span>Reclaimed Wood</span>
+                                <span>Handcrafted</span>
+                            </div>
+                            <a href="artisan-profile.html" class="btn btn-primary btn-block">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Artisan Card 4 -->
+                    <div class="artisan-card" data-craft="jewelry" data-location="varanasi">
+                        <div class="artisan-image">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Priya Patel - Jewelry Designer" loading="lazy">
+                            <span class="artisan-badge new">New</span>
+                        </div>
+                        <div class="artisan-info">
+                            <div class="artisan-header">
+                                <h3>Priya Patel</h3>
+                                <div class="rating" data-rating="4.9">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                    <span class="review-count">(203)</span>
+                                </div>
+                            </div>
+                            <p class="craft">Jewelry Designer</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Varanasi, India</p>
+                            <p class="description">Creates exquisite handcrafted jewelry using traditional Indian techniques with a modern twist. Specializes in gold and silver filigree work.</p>
+                            <div class="artisan-tags">
+                                <span>Handmade</span>
+                                <span>Filigree</span>
+                                <span>Custom Designs</span>
+                            </div>
+                            <a href="artisan-profile.html" class="btn btn-primary btn-block">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Artisan Card 5 -->
+                    <div class="artisan-card" data-craft="metalwork" data-location="jaipur">
+                        <div class="artisan-image">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Amit Singh - Metal Artisan" loading="lazy">
+                            <span class="artisan-badge featured">Featured</span>
+                        </div>
+                        <div class="artisan-info">
+                            <div class="artisan-header">
+                                <h3>Amit Singh</h3>
+                                <div class="rating" data-rating="4.8">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                    <span class="review-count">(178)</span>
+                                </div>
+                            </div>
+                            <p class="craft">Metal Artisan</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Jaipur, India</p>
+                            <p class="description">Specializes in traditional Indian metalwork including brass and copper items. Creates beautiful home decor and utensils using age-old techniques.</p>
+                            <div class="artisan-tags">
+                                <span>Handcrafted</span>
+                                <span>Brass Work</span>
+                                <span>Copper Art</span>
+                            </div>
+                            <a href="artisan-profile.html" class="btn btn-primary btn-block">View Profile</a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="pagination">
-                    <button id="prev-page" disabled>← Previous</button>
-                    <span id="page-info">Page 1 of 1</span>
-                    <button id="next-page" disabled>Next →</button>
+                    <button class="page-nav btn" id="prevPage" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <div class="page-numbers">
+                        <!-- Dynamic page numbers will be inserted here by JavaScript -->
+                    </div>
+                    <button class="page-nav btn" id="nextPage">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>Join our community of artisans and supporters</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artisans.html">Artisan Directory</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="join-community.html">Join Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="current-year">2024</span> ArtisanConnect. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="js/firebase.js"></script>
     <script src="js/artisans.js"></script>
 </body>
 </html>
