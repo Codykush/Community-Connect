@@ -280,18 +280,40 @@
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.btn-cta, .btn-secondary {
+    padding: 14px 35px !important;
+    border-radius: 30px;
+    font-weight: 600 !important;
+    font-size: 1rem;
+    transition: all 0.3s ease !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn-cta {
+    background: var(--primary-color);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(255, 107, 107, 0.4);
+    background: var(--primary-dark);
 }
 
 .btn-secondary {
     background: white;
     color: var(--primary-color) !important;
-    padding: 12px 30px !important;
-    border-radius: 30px;
-    font-weight: 600 !important;
-    transition: all 0.3s ease !important;
-    border: 2px solid var(--primary-color);
-    text-decoration: none;
-    display: inline-block;
+    border-color: var(--primary-color);
 }
 
 .btn-secondary:hover {
@@ -299,6 +321,45 @@
     color: white !important;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
 }
 
 /* Responsive Styles */
