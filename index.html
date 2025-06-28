@@ -6,6 +6,7 @@
     <title>Artisan Connect | Discover Local Crafts</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/hero.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -34,13 +35,23 @@
 
     <main>
         <section class="hero">
-            <div class="container">
+            <div class="container hero-container">
+                <!-- Left Side Decorative Elements -->
+                <div class="hero-decor left-decor">
+                    <img src="images/decoration-1.svg" alt="Decorative element" class="decor-element">
+                    <div class="sketch-line line-1"></div>
+                    <div class="sketch-dot dot-1"></div>
+                </div>
+                
+                <!-- Main Hero Content -->
                 <div class="hero-content">
                     <h1 class="animate-pop-in">Discover Hidden <span>Artisan Treasures</span> Near You</h1>
                     <p class="animate-pop-in">Connecting you with local craftsmen preserving traditional arts and heritage</p>
                     <div class="search-bar animate-pop-in">
                         <input type="text" placeholder="Search by craft or location...">
-                        <button>Explore</button>
+                        <button>
+                            <i class="fas fa-search"></i> Explore
+                        </button>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -57,10 +68,17 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Right Side Decorative Elements -->
+                <div class="hero-decor right-decor">
+                    <img src="images/decoration-2.svg" alt="Decorative element" class="decor-element">
+                    <div class="sketch-line line-2"></div>
+                    <div class="sketch-dot dot-2"></div>
+                </div>
             </div>
             <div class="hero-shape">
                 <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-                    <path d="M0,100 C300,0 700,0 1440,100 L1440,0 L0,0 Z"></path>
+                    <path d="M0,100 C300,0 700,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff"></path>
                 </svg>
             </div>
         </section>
