@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M50 150C50 94.7715 94.7715 50 150 50C205.228 50 250 94.7715 250 150C250 205.228 205.228 250 150 250C94.7715 250 50 205.228 50 150Z" stroke="#4ECDC4" stroke-width="2" stroke-dasharray="8 8" fill-opacity="0.1" fill="#4ECDC4"/>
+  <path d="M100 150C100 121.072 123.072 98 152 98C180.928 98 204 121.072 204 150C204 178.928 180.928 202 152 202C123.072 202 100 178.928 100 150Z" stroke="#FF6B6B" stroke-width="2" stroke-dasharray="6 6" fill-opacity="0.1" fill="#FF6B6B"/>
+  <path d="M125 150C125 139.507 133.507 131 144 131C154.493 131 163 139.507 163 150C163 160.493 154.493 169 144 169C133.507 169 125 160.493 125 150Z" fill="#FFE66D" fill-opacity="0.8"/>
+</svg>
